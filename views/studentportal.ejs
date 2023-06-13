@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs.Sathyabama</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+h4 {
+  color: #000000;
+}
+input,
+input[type="radio"] + label,
+input[type="checkbox"] + label:before,
+select option,
+select {
+  width: 100%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+input:focus {
+  outline: 0;
+  border-color: #000000;
+}
+input:focus + .input-icon i {
+  color: #000000;
+}
+input:focus + .input-icon:after {
+  border-right-color: #000000;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label,
+select {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  float: left;
+  border-radius: 0;
+}
+input[type="radio"] + label:first-of-type {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+input[type="radio"] + label:last-of-type {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+input[type="radio"] + label i {
+  padding-right: 0.4em;
+}
+input[type="radio"]:checked + label,
+input:checked + label:before,
+select:focus,
+select:active {
+  background-color: #9e1c3f;
+  color: #000000;
+  border-color: #9e1c3f;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  position: relative;
+  display: block;
+  padding-left: 1.6em;
+}
+input[type="checkbox"] + label:before {
+  position: absolute;
+  top: 0.2em;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 1em;
+  padding: 0;
+  content: "";
+}
+input[type="checkbox"] + label:after {
+  position: absolute;
+  top: 0.45em;
+  left: 0.2em;
+  font-size: 0.8em;
+  color: #000000;
+  opacity: 0;
+  font-family: FontAwesome;
+  content: "\f00c";
+}
+input:checked + label:after {
+  opacity: 1;
+}
+select {
+  height: 3.4em;
+  line-height: 2;
+}
+select:first-of-type {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+select:last-of-type {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+select:focus,
+select:active {
+  outline: 0;
+}
+select option {
+  background-color: #000000;
+  color: #000000;
+}
+.input-group {
+  margin-bottom: 1em;
+  zoom: 1;
+}
+.input-group:before,
+.input-group:after {
+  content: "";
+  display: table;
+}
+.input-group:after {
+  clear: both;
+}
+.input-group-icon {
+  position: relative;
+}
+.input-group-icon input {
+  padding-left: 4.4em;
+}
+.input-group-icon .input-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.4em;
+  height: 3.4em;
+  line-height: 3.4em;
+  text-align: center;
+  pointer-events: none;
+}
+.input-group-icon .input-icon:after {
+  position: absolute;
+  top: 0.6em;
+  bottom: 0.6em;
+  left: 3.4em;
+  display: block;
+  border-right: 1px solid #e5e5e5;
+  content: "";
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.input-group-icon .input-icon i {
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.row {
+  zoom: 1;
+}
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.col-half {
+  padding-right: 10px;
+  float: left;
+  width: 50%;
+}
+.col-half:last-of-type {
+  padding-right: 0;
+}
+.col-third {
+  padding-right: 10px;
+  float: left;
+  width: 33.33333333%;
+}
+.col-third:last-of-type {
+  padding-right: 0;
+}
+@media only screen and (max-width: 540px) {
+  .col-half {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+</style>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg colorset ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home.html"><img src="images/Navbarimg1.png" width="200px" alt=""></a>
+          <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/event">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/pay">Payments</a>
+              </li>
+            </ul>
+            <ul class="social">
+            <li> <%= username %> </li>
+            </ul>
+            <a href="/home.html"><button type="button" class="loginbutton">Signout</button></a>
+          </div>
+        </div>
+      </nav>
+<!-- content -->
+<div class="titletag">
+    <h1>Event Organising Form</h1> 
+   </div>
+<form style="padding: 20px 190px 100px 190px;" action="/eventadded" method="post">
+    <div class="row">
+      <h4>Plan An Event</h4>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Event Title" name="event"/>
+        <div class="input-icon"><i class="fa fa-envelope"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Club Name" name="clubname"/>
+        <div class="input-icon"><i class="fa fa-envelope"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Faculty Coordinator" name="faculty"/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Student Coordinator" name="student"/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Brochure Link" name="BrochureLink"/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Google Link" name="GoogleLink"/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-half">
+        <h4>Event Date</h4>
+        <div class="input-group">
+          <div class="col-third">
+            <input type="text" placeholder="DDMMYYYY" name="dateevent"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-half">
+        <h4>Mode</h4>
+        <div class="input-group">
+          <input id="gender-male" type="radio" name="gender" value="male"/>
+          <label for="gender-male">Online</label>
+          <input id="gender-female" type="radio" name="gender" value="female"/>
+          <label for="gender-female">Offline</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h4>Registration Fee</h4>
+      <div class="input-group">
+        <input id="payment-method-card" type="radio" name="payment-method" value="card" checked="true"/>
+        <label for="payment-method-card"><span><i class="fa fa-cc-visa"></i>Pay</span></label>
+        <input id="payment-method-paypal" type="radio" name="payment-method" value="paypal"/>
+        <label for="payment-method-paypal"> <span><i class="fa fa-cc-paypal"></i>Free</span></label>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Timings"/>
+        <div class="input-icon"><i class="fa fa-credit-card"></i></div>
+      </div>
+      <div class="col-half">
+        <div class="input-group input-group-icon">
+          <input type="text" placeholder="Speaker"/>
+          <div class="input-icon"><i class="fa fa-user"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h4>Terms and Conditions</h4>
+      <div class="input-group">
+        <input id="terms" type="checkbox"/>
+        <label for="terms">I accept the terms and conditions for organising all event in a well detailed manner.</label>
+      </div>
+    </div>
+    <br>
+    <button type="submit" style="background-color: #9e1c3f; padding:18px 60px 18px 60px">Submit</button>
+  </form>
+
+
+      <footer class="colorset">
+        <div class="content">
+          <div class="left box">
+            <div class="upper">
+              <div class="topic"><h1>About us</h1></div>
+              <p>Sathyabama has emerged as a leading institution and achieved excellence in higher education to the international 
+                standards through 48 Undergraduate Programmes, 22 Postgraduation programmes, Research, Technology Incubation, 
+                Product innovation in Science and Technology.</p>
+            </div>
+            <div class="lower">
+              <div class="topic"><h1>Contact us</h1></div>
+              <div class="phone">
+                <img src="images/telephone.png" alt="">
+                <a href="#">+91 9573913771</a>
+              </div>
+              <br>
+              <div class="email">
+                <img src="images/email.png" alt="">
+                <a href="#">helpdesk@sathyabama.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="middle box">
+            <div class="topic"><h1>Academics</h1></div>
+            <div><a href="#">Curriculum and Syllabus</a></div>
+            <div><a href="#">Library and Knimbus store</a></div>
+            <div><a href="#">Events and Hackathons</a></div>
+            <div><a href="#">Academic Regulation</a></div>
+            <div><a href="#">Seed Funding and startup</a></div>
+          </div>
+          <div class="right box">
+            <div class="topic"><img src="images/arrow-right.png" alt=""><h1>Subscribe us</h1></div>
+            <form action="#">
+              <input type="text" placeholder="Enter email address">
+              <input type="submit" name="" value="Send">
+              <div class="media-icons">
+                <ul class="social">
+                  <li class="navitems"><a href="https://www.sathyabama.ac.in/linkedin.html" target="_blank"><img src="images/linkedin.png"  alt=""></a></li>
+                  <li class="navitems"><a href="https://www.facebook.com/SathyabamaOfficial/" target="_blank"><img src="images/facebook.png"  alt=""></a></li>
+                  <li class="navitems"><a href="https://www.instagram.com/sathyabama.official/" target="_blank"><img src="images/instagram.png"  alt=""></a></li>
+                  <li class="navitems"><a href="https://twitter.com/sathyabamaSIST" target="_blank"><img src="images/twitter.png"  alt=""></a></li>
+                 </ul>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="bottom">
+          <p>Copyright © 2022 <a href="#">Events.Sathyabama</a> All rights reserved</p>
+        </div>
+      </footer>
+      <script src="//code.tidio.co/l9bqucniv1wlolan0iit9vrbdx6pedx1.js" async></script>
+<script src="server.js"></script>
+</body>
+</html>
